@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will you go out with me?</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Will You Go Out With 🤗Me?</h1>
+        <img id="gif-img" src="/assets/main.gif" alt="Rabbit blushing gif" />
+        <a href="yes.html"><button id="yes-btn">Yes</button></a>
+        <button id="no-btn" onclick="moveBtn()" onmouseover="moveBtn()">
+          No
+        </button>
+      </div>
+    </div>
+
+    <script>
+      if (performance.navigation.type === 1) {
+        // Redirect to the specific page
+        window.location.href = "/pages/main.html";
+      }
+
+      function moveBtn() {
+        // Get window dimensions
+        const button = document.getElementById("no-btn");
+        var x = Math.random() * (window.innerWidth - button.offsetWidth);
+        var y = Math.random() * (window.innerHeight - button.offsetHeight);
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html>

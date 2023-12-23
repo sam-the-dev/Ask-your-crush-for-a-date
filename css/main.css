@@ -1,0 +1,131 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #f8c8dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative; /* Add position relative to the container */
+}
+
+.content {
+  width: fit-content; /* Set a fixed width */
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.btn-container {
+  width: 440px;
+  background-color: black;
+  text-align: center;
+}
+
+#gif-img {
+  width: 440px;
+  margin-bottom: 3em;
+  margin-left: 6.5em;
+}
+
+h1 {
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+#yes-btn,
+#no-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: 60px;
+  width: 120px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  transition: 0.3s all;
+  font-weight: 600;
+  background-color: #a2d2ff;
+  color: black;
+}
+
+#no-btn {
+  top: 538px;
+  right: 600px;
+  position: absolute;
+}
+
+#yes-btn {
+  position: relative;
+  left: 100px;
+}
+
+#yes-btn:hover,
+#no-btn:hover {
+  background-color: rgb(246, 1, 1);
+  transition: 0.3s all;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 1540px) {
+  #no-btn {
+    right: 550px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #no-btn {
+    right: 310px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    transform: scale(0.7);
+  }
+
+  #no-btn {
+    right: 110px;
+    top: 543px;
+  }
+
+  #gif-image {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    transform: scale(0.5);
+    margin-left: -3em;
+  }
+
+  h1 {
+    margin-left: 2em;
+  }
+
+  #no-btn {
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    margin-left: -7em;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .content {
+    margin-left: -7em;
+  }
+}
