@@ -75,6 +75,12 @@ h1 {
   color: aliceblue;
 }
 
+#no-btn:active {
+  /* transition: 0.3s all; */
+  background-color: #a2d2ff;
+  color: black;
+}
+
 @media only screen and (max-width: 1540px) {
   #no-btn {
     right: 550px;
