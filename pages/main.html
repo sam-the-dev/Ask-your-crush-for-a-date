@@ -11,7 +11,7 @@
       <div class="content">
         <h1>Will You Go Out With 🤗Me?</h1>
         <img id="gif-img" src="/assets/main.gif" alt="Rabbit blushing gif" />
-        <a href="yes.html"><button id="yes-btn">Yes</button></a>
+        <button id="yes-btn">Yes</button>
         <button id="no-btn" onclick="moveBtn()" onmouseover="moveBtn()">
           No
         </button>
@@ -19,14 +19,19 @@
     </div>
 
     <script>
-      const button = document.getElementById("no-btn");
+      const yesButton = document.getElementById("yes-btn");
+      const noButton = document.getElementById("no-btn");
+
+      yesButton.addEventListener("click", function () {
+        window.location.href = "/pages/yes.html";
+      });
 
       function moveBtn() {
         // Get window dimensions
-        const x = Math.random() * (window.innerWidth - button.offsetWidth);
-        const y = Math.random() * (window.innerHeight - button.offsetHeight);
-        button.style.right = `${x}px`;
-        button.style.top = `${y}px`;
+        const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+        noButton.style.right = `${x}px`;
+        noButton.style.top = `${y}px`;
 
         console.log(`x: ${x}, y: ${y}`);
       }
